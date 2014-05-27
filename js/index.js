@@ -1,6 +1,6 @@
 var wholePage = {
   onReady: function{
-    $('a[href*="#"]').click(wholePage.scrollToSection);
+    $('a[href="#"]').click(wholePage.scrollToSection);
   },
 
   scrollToSection: function(event){
