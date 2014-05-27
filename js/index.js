@@ -1,20 +1,15 @@
 var wholePage = {
-  onReady: function{
+  onReady: function(){
     $('a[href="#"]').click(wholePage.scrollToSection);
   },
 
   scrollToSection: function(event){
-    alert(this);
-    var sectionName = this.id;
-    console.log(sectionName);
+    var sectionId = this.id;
+    $(document.body).animate({
+      'scrollTop' : $('.'+ sectionId +'').offset().top}, 1000);
   },
 
 };
 
 $(document).ready(wholePage.onReady);
-
-
-// (this).click(function() {
-//             $('html, body').animate({scrollTop: targetOffset}, 400);
-//             return false;
 
