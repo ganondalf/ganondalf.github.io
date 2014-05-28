@@ -2,13 +2,8 @@ var wholePage = {
 
   onReady: function(){
     wholePage.firstAction();
+    $('.arrow').hover(wholePage.hoverArrows);
     $('a[href="#"]').click(wholePage.scrollToSection);
-  },
-
-  positionBox: function(){
-    var width = $('.welcome').width() / 4;
-    var height = $('.welcome').height() / 4;
-    $('#thoughtbox').css({'position': 'relative', 'margin-left': width +'px'})
   },
 
   firstAction: function(){
@@ -29,6 +24,8 @@ var wholePage = {
     $(document.body).animate({
       'scrollTop' : $('.'+ sectionId +'').offset().top}, 1000);
   },
+
+
 
 };
 
