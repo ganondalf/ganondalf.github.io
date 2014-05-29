@@ -2,6 +2,7 @@ var wholePage = {
 
   onReady: function(){
     wholePage.firstAction();
+    wholePage.hideBottomText();
     $('.arrow').hover(wholePage.hoverArrows);
     $('a[href="#"]').click(wholePage.scrollToSection);
   },
@@ -14,9 +15,26 @@ var wholePage = {
    },
 
   hidePage: function(){
-    var width = $('.welcome').width();
-    // $('.welcome').animate({top: width}, {queue:false, duration: 2000});
-    $('.welcome').fadeOut();
+    var width = $('#slidingPage').width();
+    $('#slidingPage').animate({left: width},2000);
+    window.setTimeout(wholePage.showAboutMe, 2000);
+  },
+
+  showAboutMe: function(){
+    $('.innerContainer').show();
+  },
+
+  hideBottomText: function(){
+    $('.innerContainer').hide()
+    $('#workBottomImage').hide();
+    $('#funBottomImage').hide();
+  },
+
+  hoverArrows: function(event) {
+    var hoverId = this.id;
+    var classId = '.' + this.id;
+    $(classId).toggle();
+    console.log(classId);
   },
 
   scrollToSection: function(event){

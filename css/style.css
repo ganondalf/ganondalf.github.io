@@ -32,17 +32,19 @@ nav ul li a {
   color: white;
 }
 
-.full-page .welcome{
+/*.full-page .welcome{
   overflow: hidden;
   width: 100%;
   height: 100%;
-}
+}*/
 
 #slidingPage{
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
   background-color: black;
+  top: 0;
+  left: 0;
 }
 
 #thoughtbox {
@@ -68,7 +70,6 @@ nav ul li a {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background-color:
 }
 
 .innerContainer {
@@ -83,36 +84,49 @@ nav ul li a {
   margin: 0 auto;
 }
 .aboutBox{
+  position: relative;
   dislay: inline-block;
   margin: 1%;
   float: left;
   width: 30%;
   height: 90%;
 }
+
 .work, .learn, .relax{
   border: 2px solid black;
-  background-repeat: none;
 }
 
-.work {
+#workTopImage, #workBottomImage, #funTopImage, #funBottomImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.work #workTopImage {
   background-image: url('../images/nyskyline.jpg');
-  background-size: 100% 100%;
+   background-size: 100% 100%;
   -moz-background-size:100% 100%;
   -webkit-background-size:100% 100%;
+}
+
+.work p {
+  color: black;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  width: 100%;
+}
+
+#workTopImage h1, #funTopImage h1 {
+  color: white;
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 103%;
 
 }
 
 .learn {
   border: none;
-}
-
-.work h1 {
-  color: white;
-  font-family: 'Advent Pro', sans-serif;
-  font-size: 60px;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 80%;
 }
 
 .learn h1 {
@@ -133,23 +147,37 @@ nav ul li a {
   width: 100%;
 }
 
-.fun {
+.fun #funTopImage {
   background-image: url('../images/sunset.jpg');
   background-size: 100% 100%;
   -moz-background-size:100% 100%;
   -webkit-background-size:100% 100%;
 }
 
+.work #workBottomImage {
+  background-color: white;
+  background-size: 100% 100%;
+  -moz-background-size:100% 100%;
+  -webkit-background-size:100% 100%
+}
+
+.fun #funBottomImage {
+  background-color: white;
+  background-size: 100% 100%;
+  -moz-background-size:100% 100%;
+  -webkit-background-size:100% 100%
+}
+
 .fun p {
   color: black;
-  font-family: 'Advent Pro', sans-serif;
-  font-size: 20px;
-  background-color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
   width: 100%;
 }
 
 .arrow {
+  margin-left: 5%;
   width: 40px;
   height: 40px;
-  padding: 30px;
+  padding: 15px;
 }
