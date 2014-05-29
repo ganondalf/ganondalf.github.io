@@ -21,6 +21,7 @@ var wholePage = {
   },
 
   showAboutMe: function(){
+    $('#slidingPage').remove();
     $('.innerContainer').show();
   },
 
@@ -33,8 +34,12 @@ var wholePage = {
   hoverArrows: function(event) {
     var hoverId = this.id;
     var classId = '.' + this.id;
-    $(classId).toggle();
-    console.log(classId);
+      if(classId === ".downarrow"){
+        $(document.body).animate({
+        'scrollTop' : $('.projects').offset().top}, 1000);
+      }else{
+       $(classId).toggle();
+    }
   },
 
   scrollToSection: function(event){
