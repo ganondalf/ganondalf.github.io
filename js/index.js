@@ -3,6 +3,7 @@ var wholePage = {
   onReady: function(){
     wholePage.firstAction();
     wholePage.hideBottomText();
+    $('.projpic').click(wholePage.runCarousel);
     $('.arrow').hover(wholePage.hoverArrows);
     $('a[href="#"]').click(wholePage.scrollToSection);
   },
@@ -50,7 +51,21 @@ var wholePage = {
       'scrollTop' : $('.'+ sectionId +'').offset().top}, 1000);
   },
 
-
+  runCarousel: function(event) {
+      $('.projpic').each(function() {
+          if ($(this).offset().left < 0) {
+              $(this).css("left", "150%");
+          } else if ($(this).offset().left > $('.jcarousel-wrapper').width()) {
+              $(this).animate({
+                  left: '50%',
+              }, 500 );
+          } else {
+              $(this).animate({
+                  left: '-150%',
+              }, 500 );
+          }
+      });
+    },
 
 };
 

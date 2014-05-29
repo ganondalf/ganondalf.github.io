@@ -13,19 +13,18 @@
   <link rel="shortcut icon" href="images/favicon.ico">
   <link rel="cover photo" href="images/cover-pic.jpg">
   <link rel="resume pdf" href="images/Tech-CV-May2014.pdf">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.jcarousel.js"></script>
   <script src="js/index.js"></script>
 
 </head>
 <body>
    <header>
       <nav>
-        <ul>
-          <li><a href="#" id="aboutMe">About Me</a></li>
-          <li><a href="#" id="projects">Projects</a></li>
-          <li><a href="#" id="resume">Resume</a></li>
-          <li><a href="#" id="contactMe">Contact Me</a></li>
-        </ul>
+        <a href="#" id="aboutMe">About Me</a></br>
+        <a href="#" id="projects">Projects</a></br>
+        <a href="#" id="resume">Resume</a></br>
+        <a href="#" id="contactMe">Contact Me</a></br>
       </nav>
   </header>
 
@@ -41,7 +40,7 @@
 
       <article class='aboutBox work'>
         <div  id='workTopImage'>
-          <h1>Work</h1>
+          <h1>Skills</h1>
         </div>
 
         <div class= 'leftarrow toggle' id='workBottomImage'>
@@ -64,7 +63,7 @@
       <article class='aboutBox fun'>
 
         <div id='funTopImage'>
-          <h1>Fun</h1>
+          <h1>Interests</h1>
         </div>
 
         <div class='rightarrow toggle' id='funBottomImage'>
@@ -77,7 +76,20 @@
     </div>
   </section>
 
-  <section class="full-page projects"></section>
+  <section class="full-page projects">
+    <div class='innerContainer'>
+      <h1>Projects</h1>
+      <div class="jcarousel-wrapper">
+        <div class="jcarousel">
+            <div><img src="images/green.jpg"  alt="" class='projpic' id='example1'></div>
+            <div><img src="images/nyskyline.jpg" alt="" class='projpic' id='example2'></div>
+            <div><img src="images/sunset.jpg" alt="" class='projpic' id='example3'></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <section class="full-page resume">
     <div id='resumepdf'>
       <object data="images/Tech-CV-May2014.pdf" type="application/pdf" width="100%" height="100%">

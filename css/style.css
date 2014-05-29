@@ -10,21 +10,19 @@ body {
   border: 5px solid black;
 }
 nav {
-  text-align: right;
+  text-align: left;
   position: fixed;
-  width: 100%;
+  height: 100%;
+  width: 11%;
   background-color: black;
   opacity: 0.6;
 }
 
-nav ul li {
-  font-size: 20px;
+nav a {
+  font-size: 18px;
   font-family: 'Open Sans', sans-serif;
+  margin-left: 5px;
   padding: 10px;
-  display: inline;
-}
-
-nav ul li a {
   text-decoration: none;
   color: white;
 }
@@ -65,9 +63,8 @@ nav ul li a {
 
 .innerContainer {
   width: 90%;
-  height: 90%;
-  margin: 0 auto;
-  margin-top: 55px;
+  height: 100%;
+  margin-left: 11%;
   border: 2px solid black;
 }
 
@@ -110,7 +107,7 @@ nav ul li a {
 #workTopImage h1, #funTopImage h1 {
   color: white;
   font-family: 'Advent Pro', sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   text-align: center;
   margin-top: 103%;
 
@@ -121,15 +118,18 @@ nav ul li a {
 }
 
 .learn h1 {
+  position: relative;
   color: black;
   font-family: 'Advent Pro', sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   text-align: center;
+  margin-top: 40px;
   background-color: white;
   width: 100%;
 }
 
 .learn p {
+  position: relative;
   color: black;
   font-family: 'Lato', sans-serif;
   font-size: 18px;
@@ -168,8 +168,58 @@ nav ul li a {
 
 .arrow {
   margin-left: 5%;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   padding: 15px;
 }
+
+.jcarousel-wrapper {
+    left: 50%;
+    margin-left: -25%;
+    width: 50%;
+    height: 70%;
+    overflow: hidden;
+    position: absolute;
+    border: 10px solid #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 2px #999;
+    -moz-box-shadow: 0 0 2px #999;
+    box-shadow: 0 0 2px #999;
+}
+
+.projpic {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    line-height: 300px;
+    font-size: 50px;
+    text-align: center;
+    border: 2px solid black;
+    left: 50%;
+    top: 30px;
+    margin-left: -25%;
+}
+
+#example3 {
+  left: -150%;
+}
+
+#example1 {
+}
+
+#example2 {
+  left: 150%;
+}
+
+
+
+
+
+
+
+
+
+
 
