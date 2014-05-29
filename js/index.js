@@ -35,6 +35,7 @@ var wholePage = {
     var hoverId = this.id;
     var classId = '.' + this.id;
       if(classId === ".downarrow"){
+        event.preventDefault();
         $(document.body).animate({
         'scrollTop' : $('.projects').offset().top}, 1000);
       }else{
@@ -43,6 +44,7 @@ var wholePage = {
   },
 
   scrollToSection: function(event){
+    event.preventDefault();
     var sectionId = this.id;
     $(document.body).animate({
       'scrollTop' : $('.'+ sectionId +'').offset().top}, 1000);
